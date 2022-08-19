@@ -57,6 +57,7 @@ const products = [
 
 function App() {
   const [name, setName] = useState("");
+  const [votes, setVotes] = useState({});
 
   return (
     <>
@@ -75,8 +76,13 @@ function App() {
               key={choice.txt}
               txt={choice.txt}
               bgColor={choice.bgColor}
-              clickHandler={() => {
-                console.log("click");
+              clickHandler={(event) => {
+                console.log(event.target.innerText);
+                setVotes((prevVotes) => ({
+                  ...prevVotes,
+                  [event.target.innerText]:
+                    prevVotes[event.target.innerText] + 1 || 1,
+                }));
               }}
             />
           ))}

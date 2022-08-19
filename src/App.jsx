@@ -67,16 +67,21 @@ function App() {
       <Form setName={setName} />
       <Products products={products} />
 
-      {choices.map((choice) => (
-        <Button
-          key={choice.txt}
-          txt={choice.txt}
-          bgColor={choice.bgColor}
-          clickHandler={() => {
-            console.log("click");
-          }}
-        />
-      ))}
+      <section>
+        <h2 className="my-8 text-center text-3xl">Rock, Paper, Scissors</h2>
+        <div className="mx-auto flex w-48 justify-center gap-x-4">
+          {choices.map((choice) => (
+            <Button
+              key={choice.txt}
+              txt={choice.txt}
+              bgColor={choice.bgColor}
+              clickHandler={() => {
+                console.log("click");
+              }}
+            />
+          ))}
+        </div>
+      </section>
     </>
   );
 }

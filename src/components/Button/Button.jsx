@@ -5,7 +5,7 @@ export default function Button({ changeHandler, txt, bgColor }) {
     <button
       type="button"
       onClick={changeHandler}
-      className={`rounded text-white bg-${bgColor}-500`}
+      className={`rounded text-white bg-${bgColor}-500 px-4 py-2`}
     >
       {txt}
     </button>

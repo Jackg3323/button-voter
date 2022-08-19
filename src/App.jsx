@@ -77,11 +77,16 @@ function App() {
               txt={choice.txt}
               bgColor={choice.bgColor}
               clickHandler={(event) => {
-                console.log(event.target.innerText);
+                const newVote = event.target.innerText.toLowerCase();
+
+                // TODO: Use setVotes dispatch function to update votes state
+                // Use `event.target.innerText` to find the key in the votes state object
+                // If it's not found, create that property and set it to 1
+                // If it is found, increment it by 1
+
                 setVotes((prevVotes) => ({
                   ...prevVotes,
-                  [event.target.innerText]:
-                    prevVotes[event.target.innerText] + 1 || 1,
+                  [newVote]: prevVotes[newVote] ? prevVotes[newVote] + 1 : 1,
                 }));
               }}
             />

@@ -4,6 +4,7 @@ import Button from "./components/Button/Button";
 import Form from "./components/Form/Form";
 import Products from "./components/Products/Products";
 import Profile from "./components/Profile/Profile";
+import Results from "./components/Results/Results";
 
 const choices = [
   {
@@ -70,6 +71,9 @@ function App() {
 
       <section>
         <h2 className="my-8 text-center text-3xl">Non-Rigged Elections</h2>
+
+        <Results results={votes} />
+
         <div className="mx-auto flex w-48 justify-center gap-x-4">
           {choices.map((choice) => (
             <Button

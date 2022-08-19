@@ -65,5 +65,23 @@ Array [
       $199.99
     </li>
   </ul>,
+  <button
+    className="rounded px-4 py-2 text-white bg-red-500"
+    type="button"
+  >
+    Rock
+  </button>,
+  <button
+    className="rounded px-4 py-2 text-white bg-orange-500"
+    type="button"
+  >
+    Paper
+  </button>,
+  <button
+    className="rounded px-4 py-2 text-white bg-green-500"
+    type="button"
+  >
+    Scissors
+  </button>,
 ]
 `;

@@ -5,7 +5,7 @@ export default function Button({ changeHandler, txt, bgColor }) {
     <button
       type="button"
       onClick={changeHandler}
-      className={`rounded text-white bg-${bgColor}-500 px-4 py-2`}
+      className={`rounded px-4 py-2 text-white bg-${bgColor}-500`}
     >
       {txt}
     </button>
@@ -19,5 +19,5 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  bgColor: "green",
+  bgColor: "blue",
 };

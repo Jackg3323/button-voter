@@ -1,8 +1,24 @@
 import { useState } from "react";
 import "./App.css";
+import Button from "./components/Button/Button";
 import Form from "./components/Form/Form";
 import Products from "./components/Products/Products";
 import Profile from "./components/Profile/Profile";
+
+const choices = [
+  {
+    txt: "Rock",
+    bgColor: "red",
+  },
+  {
+    txt: "Paper",
+    bgColor: "indigo",
+  },
+  {
+    txt: "Scissors",
+    bgColor: "green",
+  },
+];
 
 const imgUrl = "https://i.imgur.com/yXOvdOSs.jpg";
 const products = [
@@ -50,6 +66,17 @@ function App() {
       {name && <Profile name={name} imgUrl={imgUrl} />}
       <Form setName={setName} />
       <Products products={products} />
+
+      {choices.map((choice) => (
+        <Button
+          key={choice.txt}
+          txt={choice.txt}
+          bgColor={choice.bgColor}
+          clickHandler={() => {
+            console.log("click");
+          }}
+        />
+      ))}
     </>
   );
 }

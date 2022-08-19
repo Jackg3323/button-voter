@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-export default function Button({ changeHandler, txt, bgColor }) {
+export default function Button({ clickHandler, txt, bgColor }) {
   return (
     <button
       type="button"
-      onClick={changeHandler}
+      onClick={clickHandler}
       className={`rounded px-4 py-2 text-white bg-${bgColor}-500`}
     >
       {txt}
@@ -13,7 +13,7 @@ export default function Button({ changeHandler, txt, bgColor }) {
 }
 
 Button.propTypes = {
-  changeHandler: PropTypes.func.isRequired,
+  clickHandler: PropTypes.func.isRequired,
   bgColor: PropTypes.string,
   txt: PropTypes.string.isRequired,
 };

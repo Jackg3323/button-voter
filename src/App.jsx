@@ -69,7 +69,7 @@ function App() {
       <Products products={products} />
 
       <section>
-        <h2 className="my-8 text-center text-3xl">Rock, Paper, Scissors</h2>
+        <h2 className="my-8 text-center text-3xl">Non-Rigged Elections</h2>
         <div className="mx-auto flex w-48 justify-center gap-x-4">
           {choices.map((choice) => (
             <Button
@@ -78,11 +78,6 @@ function App() {
               bgColor={choice.bgColor}
               clickHandler={(event) => {
                 const newVote = event.target.innerText.toLowerCase();
-
-                // TODO: Use setVotes dispatch function to update votes state
-                // Use `event.target.innerText` to find the key in the votes state object
-                // If it's not found, create that property and set it to 1
-                // If it is found, increment it by 1
 
                 setVotes((prevVotes) => ({
                   ...prevVotes,
